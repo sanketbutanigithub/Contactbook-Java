@@ -29,7 +29,6 @@ public class AddressBook {
     }
 
     public static List<Contact> searchbyname(String name){
-        System.out.println(mycontact);
         for(int i = 0 ;i<mycontact.size();i++){
             if(mycontact.get(i).getName().contains(name)){
                 searhcbynamelist.add(mycontact.get(i));
