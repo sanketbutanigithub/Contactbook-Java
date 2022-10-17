@@ -49,7 +49,7 @@ public class AddressBook {
     public static String updatecontact(String updatename,Contact contact){
 
         for(int i = 0 ;i<mycontact.size();i++){
-            if(mycontact.get(i).name == updatename){
+            if(mycontact.get(i).name.equals(updatename)){
                 mycontact.remove(i);
                 mycontact.add(i,contact);
                 return "Update successfully";
@@ -59,8 +59,9 @@ public class AddressBook {
     }
 
     public static String deletecontact(String name){
+        System.out.println("get from user "+name);
         for(int i = 0 ;i<mycontact.size();i++){
-            if(mycontact.get(i).name == name){
+            if(mycontact.get(i).name.equals(name)){
                 mycontact.remove(i);
                 return "Delete successfully";
             }
